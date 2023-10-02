@@ -27,6 +27,7 @@ public class ProductService {
     public void saveProduct(Product product) {
         // Let's say we want to double the price all the time. Why? Well just to add some extra logic into the service.
         // Because, usually, service is the place where you put your business logic: validation, calculations, data-generating.
+
         product.setPrice(product.getPrice() * 2);
         productRepository.save(product);
     }
